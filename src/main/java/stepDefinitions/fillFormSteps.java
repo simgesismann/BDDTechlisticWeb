@@ -63,6 +63,7 @@ public class fillFormSteps extends FormPage{
     }
     @Then("press button")
     public void pressButton() {
+        rollUntilFindElement(SubmitButtonLocator);
         formPage.clickSubmitButton();
     }
     @AfterTest

@@ -1,6 +1,7 @@
 Feature: feature to test fill form
-  Scenario: tests fill form
-    Given user is on formPage
+  Background: navigate to form page
+    Given navigate to website
+  Scenario: tests fill form basic
     And fill name
     And fill surname
     And choose gender
@@ -13,8 +14,15 @@ Feature: feature to test fill form
     And upload sample file
     Then press button
 
-    Scenario Outline: tests fill form outline
-      Given navigate to website
+    Scenario: test fill form with variables from here
+      And fill name "sevgi"
+      And fill lastname "yaşar"
+      And choose gender
+      And choose years of experience
+      And send date "21.11.2022"
+
+    Scenario Outline: tests fill form with outline
+
       And fill name "<firstname>"
       And fill lastname "<lastname>"
       And choose gender
