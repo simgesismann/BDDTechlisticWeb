@@ -5,11 +5,14 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import utilities.Driver;
 
-public class fillFormSteps {
-    FormPage formPage;
+public class fillFormSteps extends FormPage{
+    FormPage formPage = new FormPage();
     WebDriver driver;
     @Given("user is on formPage")
     public void user_is_on_form_page() {
@@ -62,14 +65,14 @@ public class fillFormSteps {
     public void pressButton() {
         formPage.clickSubmitButton();
     }
-    @After
-    public void tearDown(){
-        if(driver!=null){
-            driver.quit();
-            driver=null;
-        }
+    @AfterTest
+    public void quit() throws InterruptedException {
+        wait(2);
+        Driver.quitDriver();
     }
-
-
-
+    @After
+    public void close() throws InterruptedException {
+        wait(2);
+        Driver.closeDriver();
+    }
 }

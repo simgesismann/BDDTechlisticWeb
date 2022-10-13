@@ -15,8 +15,15 @@ public class FormPage extends FormPageConstants {
         scrollDown();
         sendKeys(NameLocator,"simge");
     }
+    public void fillNameOutline(String name){
+        scrollDown();
+        sendKeys(NameLocator,name);
+    }
     public void fillSurname(){
         sendKeys(SurnameLocator,"sisman");
+    }
+    public void fillSurnameOutline(String surname){
+        sendKeys(SurnameLocator,surname);
     }
     public void chooseGender(){
         click(GenderRadioButtonsLocator);
@@ -27,6 +34,10 @@ public class FormPage extends FormPageConstants {
     public void typeDate(){
         rollUntilFindElement(DateTextLocator);
         sendKeys(DateTextLocator,"12.10.2022");
+    }
+    public void typeDateOutline(String date){
+        rollUntilFindElement(DateTextLocator);
+        sendKeys(DateTextLocator,date);
     }
     public void chooseExperienceAutomationTester(){
         click(ExperienceAutomationTesterLocator);
