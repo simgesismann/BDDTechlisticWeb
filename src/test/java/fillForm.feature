@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: feature to test fill form
   Background: navigate to form page
     Given navigate to website
