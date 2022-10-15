@@ -18,6 +18,7 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.5.0</version>
         </dependency>
+        <!--7.5.0-->
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -52,27 +53,7 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.3.4</version>
         </dependency>
-        <dependency>
-
-            <groupId>com.aventstack</groupId>
-
-            <artifactId>extentreports</artifactId>
-
-            <version>3.0.6</version>
-
-        </dependency>
-
-        <dependency>
-
-            <groupId>com.vimalselvam</groupId>
-
-            <artifactId>cucumber-extentsreport</artifactId>
-
-            <version>3.0.2</version>
-
-        </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
 
     </dependencies>
 
